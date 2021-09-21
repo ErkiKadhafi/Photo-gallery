@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+section {
+  z-index: 1;
+}
+header {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: sticky;
+  top: 0;
+  background: white; */
+}
+header h2 {
+  padding: 2rem;
+  font-size: 2rem;
+}
+nav {
+  /* background: blue; */
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mode {
+  background: rgb(103, 91, 170);
+  color: white;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  /* border: 3px solid black; */
+  position: absolute;
+  padding: 1.5rem;
+  border-radius: 25%;
+  right: 0;
+  cursor: pointer;
+}
+
+.mode i {
+  pointer-events: none;
+}
+.photon {
+  text-decoration: none;
+  color: black;
+}
+.search-form {
+  display: flex;
+  padding: 2rem;
+}
+.search-form input {
+  border: 2px solid rgb(72, 60, 138);
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+button {
+  font-family: sans-serif;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border: none;
+  background-color: rgb(103, 91, 170);
+  border: 2px solid rgb(72, 60, 138);
+  color: white;
+}
+.search-info {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+.search-info a {
+  color: gray;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 2rem 0rem;
+  column-gap: 5rem;
+  row-gap: 5rem;
+  width: 80%;
+  margin: auto;
+}
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.search-info {
+  padding: 0.5rem 0rem;
+}
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0rem;
+}
+
+@media screen and (max-width: 375px) {
+  header h2 {
+    font-size: 1.8rem;
+  }
+  .search-form input {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 650px) {
+  .search-form input {
+    font-size: 1.2rem;
+  }
+}
+.circle {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(37, 37, 37);
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+/* .photon.dark {
+  color: white;
+}
+.mode.dark {
+  background: white;
+  color: rgb(103, 91, 170);
+}
+.submit-btn.dark {
+  background: white;
+  color: rgb(103, 91, 170);
+} */
